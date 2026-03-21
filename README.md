@@ -26,7 +26,7 @@ Perfect for shop owners, daily transactions and quick calculations.
 
 ## 👨‍💻 Developer
 **Milon Hasan**  
-📧 milonhasan0077@gmail.com
+📧 currnetvai@gmail.com
 
 ---
 
