@@ -15,7 +15,7 @@ Perfect for shop owners, daily transactions and quick calculations.
 
 ## 📥 Download
 
-👉 [Download Latest APK](https://github.com/currentvai/TakaGon/releases)
+👉 [![Download APK](https://img.shields.io/badge/Download-APK-green?style=for-the-badge&logo=android)](https://github.com/currentvai/TakaGon/releases)
 
 ---
 
