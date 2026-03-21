@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TakaGon - Smart Cash Calculator for Bangladesh</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary: #004d66; /* Deep Teal from your app */
+            --accent: #2ecc71; /* Greenish accent */
+            --bg: #f0f3f5;
+            --white: #ffffff;
+            --text: #2c3e50;
+            --neumorphic-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        .logo span { color: var(--accent); }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 35px;
+            max-width: 500px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: var(--neumorphic-shadow);
+        }
+
+        .btn-main {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-main:hover {
+            transform: translateY(-3px);
+            background: #003a4d;
+        }
+
+        /* App Image/Banner Animation */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .mockup-container {
+            width: 300px;
+            padding: 15px;
+            background: var(--bg);
+            border-radius: 40px;
+            box-shadow: var(--neumorphic-shadow);
+            border: 8px solid #fff;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .mockup-container img {
+            width: 100%;
+            border-radius: 25px;
+            display: block;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: var(--neumorphic-shadow);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-card i {
+            font-size: 40px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            font-size: 24px;
+            margin: 0 15px;
+            color: var(--primary);
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover { color: var(--accent); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; text-align: center; }
+            .hero-content p { text-align: center; margin: 20px auto; }
+            .btn-group { justify-content: center; }
+            .hero-image { margin-top: 50px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="logo">Taka<span>Gon</span></div>
+            <a href="https://github.com/currentvai/TakaGon/releases" class="btn btn-main">Get App</a>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-content" data-aos="fade-right">
+                <h1>Hassle-Free <br>Cash Counting</h1>
+                <p>TakaGon is the ultimate cash calculator designed specifically for the Bangladeshi Taka. Efficient, clean, and blazingly fast.</p>
+                <div class="btn-group">
+                    <a href="https://github.com/currentvai/TakaGon/releases" class="btn btn-main"><i class="fab fa-google-play"></i> Play Store</a>
+                    <a href="https://github.com/currentvai/TakaGon/releases" class="btn" style="background:#fff;"><i class="fab fa-apple"></i> App Store</a>
+                </div>
+            </div>
+
+            <div class="hero-image" data-aos="zoom-in">
+                <div class="mockup-container">
+                    <img src="Images/TakaGon-v1.0-icon.png" alt="TakaGon App Mockup" onerror="this.src='https://via.placeholder.com/300x600?text=TakaGon+UI'">
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2 class="section-title" data-aos="fade-up">Powerful Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Smart Counting</h3>
+                    <p>Just enter the number of notes and get instant grand total in words.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-share-nodes"></i>
+                    <h3>Quick Share</h3>
+                    <p>Copy or share your calculation history with clients or friends instantly.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-moon"></i>
+                    <h3>Clean UI</h3>
+                    <p>Neumorphic modern design that is easy on the eyes and simple to use.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>DESIGNED BY CURRENT VAI</p>
+            <div class="social-icons">
+                <a href="https://github.com/currentvai"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/cv.hasan.3"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/@currentvai"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p style="font-size: 14px; color: #888;">  © 2026 TakaGon | Developed by Current Vai | BUILT FOR BANGLADESH 🇧🇩</p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
