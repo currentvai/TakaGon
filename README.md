@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="Images/Banner.png"/>
+</p>
+
+<p align="center">
   <img src="Images/TakaGon-v1.0-icon.png" width="120"/>
 </p>
 
@@ -61,8 +65,8 @@ https://github.com/currentvai/TakaGon/releases
 
 ## 👨‍💻 Developer
 
-**Currnet Vai**  
-📧 currnetvai@gmail.com  
+**Current Vai**  
+📧 currentvai@gmail.com  
 
 ---
 
